@@ -11,7 +11,7 @@ except Exception as e:
 
 
 st.title("🤖 I am your fiancial assistant")
-st.write("**AI Based Financial Analyst**")
+
 st.write("**Let's Explore, Financial Analysis, Cedit Risk and Asset Valuations!**")
 
 # --- User Input and Processing ---
@@ -34,10 +34,11 @@ if st.button("Submit", use_container_width=True):
                 )
                 
                 # 3. Display the response
-                st.subheader("Agent Response:")
+                st.subheader("Z-BOT Response:")
                 st.write(response.text)
                 
             except Exception as e:
                 st.error(f"An error occurred during API call: {e}")
     else:
+
         st.warning("Please enter a question first!")
