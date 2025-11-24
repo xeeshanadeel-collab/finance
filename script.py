@@ -4,7 +4,7 @@ from google import genai # Assuming you've imported the SDK client here
 # --- Configuration (Add your API Key) ---
 # NOTE: Replace 'YOUR_API_KEY' with your actual key or load it from environment variables
 try:
-    client = genai.Client(api_key="AIzaSyA0aVBVADHzgAN8-3hcf02VPh7sqnRa1FY") 
+    client = genai.Client(api_key=st.secrets["API_KEY"]) 
 except Exception as e:
     st.error(f"Error initializing GenAI Client: {e}")
     st.stop()
@@ -42,3 +42,4 @@ if st.button("Submit", use_container_width=True):
     else:
 
         st.warning("Please enter a question first!")
+
